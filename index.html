@@ -12,7 +12,7 @@
 <body>
     <div id=container>
 
-    <div class="jumbotron jumbotron-fluid" style="background-color: blue; color: whitesmoke">
+    <div class="jumbotron jumbotron-fluid" style="background-color: #563d7b; color: whitesmoke">
         <div class="container">
             <h1 class="display-4">AMERICAN EXPRESS</h1>
             <p class="lead text-center">American Express Trains are listed below</p>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="card">
-        <div class="card-header">
+        <div class="card-header" style="background-color: #563d7b; color: whitesmoke;">
               <h2 class="text-center">Train Schedule</h2>
         </div>
             <div class="card-body">
@@ -59,38 +59,31 @@
     </div>
 
     <div class="card">
-        <div class="card-header">
+        <div class="card-header" style="background-color: #563d7b; color: whitesmoke">
             <h2 class="text-center">Add Train</h2>
         </div>
             <div class="card-body">
                 <form>
                     <div class="form-group">
-                        <label for="enterTrainName"><h5>Train Name</h5></label>
-                        <input type="enterTrainName" class="form-control" id="enterTrainName" aria-describedby="enterTrainName" placeholder="Example: American West">
+                        <label for="train-name-input"><h5>Train Name</h5></label>
+                        <input type="enterTrainName" class="form-control" id="train-name-input" aria-describedby="enterTrainName" placeholder="Example: American West">
                     </div>
                     <div class="form-group">
-                            <label for="enterDestination"><h5>Destination</h5></label>
-                            <input type="enterDestination" class="form-control" id="enterDesination" aria-describedby="enterDestination" placeholder="Example: San Diego">
+                            <label for="desination-input"><h5>Destination</h5></label>
+                            <input type="enterDestination" class="form-control" id="destination-input" aria-describedby="enterDestination" placeholder="Example: San Diego">
                     </div>
                     <div class="form-group">
-                            <label for="enterFirstTrainTime"><h5>First Train Time</h5>(HH:MM - Military Time)</label>
-                            <input type="enterFirstTrainTime" class="form-control" id="enterFirstTrainTime" aria-describedby="enterFirstTrainTime" placeholder="Example: 14:00">
+                            <label for="time-input"><h5>First Train Time</h5>(HH:MM - Military Time)</label>
+                            <input type="enterFirstTrainTime" class="form-control" id="time-input" aria-describedby="enterFirstTrainTime" placeholder="Example: 14:00">
                     </div>
                     <div class="form-group">
-                            <label for="enterFrequency"><h5>Frequency</h5></label>
-                            <input type="enterFrequency" class="form-control" id="enterFrequency" aria-describedby="enterFrequency" placeholder="Example: 45">
+                            <label for="frequency-input"><h5>Frequency</h5></label>
+                            <input type="enterFrequency" class="form-control" id="frequency-input" aria-describedby="enterFrequency" placeholder="Example: 45">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button id="submit-btn" type="submit" class=btn style="background-color:#563d7b; color:whitesmoke">Submit</button>
                 </form>
             </div>
     </div>
-
-
-
-
-
-
-
 
     </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
