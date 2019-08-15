@@ -12,15 +12,19 @@
 <body>
     <div id=container>
 
-    <div class="jumbotron jumbotron-fluid" style="background-color: #563d7b; color: whitesmoke">
+    <div class="jumbotron jumbotron-fluid" style="background-color: rgb(19, 19, 138); color: darkred">
         <div class="container">
-            <h1 class="display-4 text-center">AMERICAN EXPRESS</h1>
-            <p class="lead text-center">American Express Trains are listed below</p>
+            <h1 class="display-4 text-center" style="font-style: italic"><strong>AMERICAN EXPRESS</strong></h1>
+            <p class="lead text-center" style="color: white">The red, white, and blue is there for you</p>
+            <br>
+            <!-- <img src="AmericanExpressLogo.png" alt="AmericanExpressLogo"> -->
+            <!-- <p class="lead text-center" style="color: white">Current Time:</p>
+            <div class="lead text-center" style="color: white" id=CurrentTime></div> -->
         </div>
     </div>
 
     <div class="card">
-        <div class="card-header" style="background-color: #563d7b; color: whitesmoke;">
+        <div class="card-header" style="background-color: darkred; color: white">
               <h2 class="text-center">Train Schedule</h2>
         </div>
             <div class="card-body">
@@ -41,7 +45,7 @@
     </div>
 
     <div class="card">
-        <div class="card-header" style="background-color: #563d7b; color: whitesmoke">
+        <div class="card-header" style="background-color: darkred; color: white">
             <h2 class="text-center">Add Train</h2>
         </div>
             <div class="card-body">
@@ -62,7 +66,7 @@
                             <label for="time-input"><h4>First Train Time</h4>(HH:MM - Military Time)</label>
                             <input type="enterFirstTrainTime" class="form-control" id="time-input" aria-describedby="enterFirstTrainTime" placeholder="Example: 14:00">
                     </div>
-                    <button id="submit-btn" type="submit" class=btn style="background-color:#563d7b; color:whitesmoke">Submit</button>
+                    <button id="submit-btn" type="submit" class=btn style="background-color:rgb(19, 19, 138); color: white">Submit</button>
                 </form>
             </div>
     </div>

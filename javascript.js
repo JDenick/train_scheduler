@@ -1,4 +1,4 @@
-alert ("Resetting..")
+// alert ("Resetting..")
 
 var firebaseConfig = {
     apiKey: "AIzaSyDTTN_C3nKl6xhX-Wp0UrDBZ_d5gdIFUnE",
@@ -62,39 +62,26 @@ database.ref().on("child_added", function(childSnapshot){
     // convert military time to AM / PM
     var newTrainTime = (moment(trainTime, 'HH:mm').format('hh:mm a'));
 
+    // calculate next train arrival
 
     // // calculate minutes to next train
- 
     var tFrequency = trainFrequency;
-
-    // Time is 3:30 AM
     var firstTime = newTrainTime;
-
-    // First Time (pushed back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
     console.log(firstTimeConverted);
-
-    // Current Time
     var currentTime = moment();
     console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
-
-    // Difference between the times
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
     console.log("DIFFERENCE IN TIME: " + diffTime);
-
-    // Time apart (remainder)
     var tRemainder = diffTime % tFrequency;
     console.log(tRemainder);
-
-    // Minute Until Train
     var tMinutesTillTrain = tFrequency - tRemainder;
     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
-
-    // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+    var nextArrival = (moment(nextTrain, 'HH:mm').format('hh:mm a'));
 
-
+   // $("#CurrentTime").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 
 
@@ -102,7 +89,8 @@ database.ref().on("child_added", function(childSnapshot){
         $("<td>").text(trainName),
         $("<td>").text(trainDestination),
         $("<td>").text("every " + trainFrequency + " minutes"),
-        $("<td>").text(newTrainTime),
+       // $("<td>").text(newTrainTime),
+        $("<td>").text(nextArrival),
         $("<td>").text(tMinutesTillTrain + " minutes")
     );
 
